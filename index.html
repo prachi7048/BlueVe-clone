@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueVe Review Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="blueve logo.png" alt="BlueVe logo">
+                <h2>BlueVe Tech Pvt Ltd</h2>
+            </div>
+            <ul>
+                <li class="badge-item">Client Feedback</li>
+                <li>Confidential &amp; Secure</li>
+                <li>Feedback</li>
+                <li>Assistance</li>
+            </ul>
+        </nav>
+    </header>
+
+    <form>
+        <div class="forms">
+            <!-- Top Header & Stepper Row (Hidden on submit success) -->
+            <div id="form-stepper-header">
+                <h5>CLIENT SUCCESS ENGAGEMENT </h5>
+                <h3>We'd love to hear from you</h3>
+
+                <!-- Multi-step navigation row -->
+                <div class="stepper-row">
+                    <div class="step-item active" id="step-indicator-1">
+                        <div class="step-top">
+                            <span class="step-number" id="step-icon-1">1</span>
+                            <span class="step-title">About you</span>
+                        </div>
+                        <span class="step-status" id="step-status-1">In Progress</span>
+                    </div>
+
+                    <div class="step-item" id="step-indicator-2">
+                        <div class="step-top">
+                            <span class="step-number" id="step-icon-2">2</span>
+                            <span class="step-title">Experience</span>
+                        </div>
+                        <span class="step-status" id="step-status-2">Pending</span>
+                    </div>
+
+                    <div class="step-item" id="step-indicator-3">
+                        <div class="step-top">
+                            <span class="step-number" id="step-icon-3">3</span>
+                            <span class="step-title">Feedback</span>
+                        </div>
+                        <span class="step-status" id="step-status-3">Pending</span>
+                    </div>
+
+                    <div class="step-item" id="step-indicator-4">
+                        <div class="step-top">
+                            <span class="step-number" id="step-icon-4">4</span>
+                            <span class="step-title">Review</span>
+                        </div>
+                        <span class="step-status" id="step-status-4">Pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 1 CONTENT -->
+            <div id="step-1" class="step-page">
+                <!-- Experience Banner Row -->
+                <div class="banner-box">
+                    <p>Tell us about your experience.<br>
+                    Help us understand the service and project you worked with us on</p>
+                </div>
+
+                <!-- Form Fields Section -->
+                <div class="form-section">
+                    <!-- Inline Row: Name & Company/Business Name -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <span class="error-text" id="name-error">Please enter your name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company / Business Name</label>
+                            <input type="text" id="company" name="company" placeholder="Enter company or business name">
+                        </div>
+                    </div>
+
+                    <!-- Full Width Row: Email -->
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            <span class="error-text" id="email-error">Please enter a valid email address</span>
+                        </div>
+                    </div>
+
+                    <!-- Services Question (2x2 Grid) -->
+                    <div class="services-section">
+                        <label class="services-question">What services did you work with BlueVe for? <span class="required">*</span></label>
+                        <span class="error-text" id="services-error">Please select at least one service</span>
+
+                        <div class="services-grid">
+                            <!-- Option 1: Web development -->
+                            <label class="service-card">
+                                <input type="checkbox" name="services" value="web-development">
+                                <div class="checkbox-indicator">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </div>
+                                <div class="service-info">
+                                    <div class="service-name">Web development</div>
+                                    <div class="service-sub">Websites, Web Apps</div>
+                                </div>
+                            </label>
+
+                            <!-- Option 2: App development -->
+                            <label class="service-card">
+                                <input type="checkbox" name="services" value="app-development">
+                                <div class="checkbox-indicator">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <div class="service-info">
+                                    <div class="service-name">App development</div>
+                                    <div class="service-sub">iOS, Android Apps</div>
+                                </div>
+                            </label>
+
+                            <!-- Option 3: UI/UX design -->
+                            <label class="service-card">
+                                <input type="checkbox" name="services" value="ui-ux-design">
+                                <div class="checkbox-indicator">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12c0 3.6 2 5.5 3.5 5.5 1 0 1.5-.9 2.5-.9 1.2 0 1.6 1.4 3 1.4 5.5 0 11-4.5 11-10 0-4.4-4.5-8-10-8z"></path>
+                                        <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+                                        <circle cx="12" cy="7.5" r="1.5" fill="currentColor"></circle>
+                                        <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+                                    </svg>
+                                </div>
+                                <div class="service-info">
+                                    <div class="service-name">UI/UX design</div>
+                                    <div class="service-sub">Figma, Wireframing</div>
+                                </div>
+                            </label>
+
+                            <!-- Option 4: Other -->
+                            <label class="service-card">
+                                <input type="checkbox" name="services" value="other">
+                                <div class="checkbox-indicator">
+                                    <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="service-info">
+                                    <div class="service-name">Other</div>
+                                    <div class="service-sub">Consulting, Custom</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Progress & Next Button Row -->
+                    <div class="form-footer-action">
+                        <div class="progress-container">
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" id="progress-fill-1" style="width: 0%;"></div>
+                            </div>
+                            <span class="progress-label" id="progress-label-1">Step 1 of 4 (0%)</span>
+                        </div>
+                        <button type="button" class="btn-next" id="btn-next-step1">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 CONTENT -->
+            <div id="step-2" class="step-page" style="display: none;">
+                <!-- Step 2 Question (No background, normal text) -->
+                <div class="step2-question-box">
+                    <h3 class="step2-title">How was your experience?</h3>
+                    <p class="step2-subtitle">Rate your overall experience and different aspects of working with BlueVe.</p>
+                </div>
+
+                <div class="form-section">
+                    <!-- Step 2 Answer Card (Light Sky Blue Background) -->
+                    <div class="experience-answer-card">
+                        <!-- Top Line of Answer: Title on left, Score result on right -->
+                        <div class="answer-card-header">
+                            <div class="answer-header-left">
+                                <h4 class="answer-main-title">Overall Experience</h4>
+                                <p class="answer-sub-prompt">How would you rate your overall experience with BlueVe?</p>
+                            </div>
+                            <div class="answer-header-right">
+                                <div class="score-badge" id="rating-score-badge">
+                                    <span class="score-num" id="rating-score-text">-</span>
+                                    <span class="score-max">/ 5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5 Star Rating Selection -->
+                        <div class="star-rating-wrapper">
+                            <div class="star-rating" id="star-rating">
+                                <button type="button" class="star-btn" data-rating="1" aria-label="1 star">
+                                    <svg class="star-icon" viewBox="0 0 24 24">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </button>
+                                <button type="button" class="star-btn" data-rating="2" aria-label="2 stars">
+                                    <svg class="star-icon" viewBox="0 0 24 24">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </button>
+                                <button type="button" class="star-btn" data-rating="3" aria-label="3 stars">
+                                    <svg class="star-icon" viewBox="0 0 24 24">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </button>
+                                <button type="button" class="star-btn" data-rating="4" aria-label="4 stars">
+                                    <svg class="star-icon" viewBox="0 0 24 24">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </button>
+                                <button type="button" class="star-btn" data-rating="5" aria-label="5 stars">
+                                    <svg class="star-icon" viewBox="0 0 24 24">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 1 Row Rating Labels -->
+                        <div class="star-labels-row">
+                            <span class="star-label-item" data-for-rating="1">1 - Need improvement</span>
+                            <span class="star-label-item" data-for-rating="2">2 - Could be better</span>
+                            <span class="star-label-item" data-for-rating="3">3 - Good</span>
+                            <span class="star-label-item" data-for-rating="4">4 - Very good</span>
+                            <span class="star-label-item" data-for-rating="5">5 - Excellent</span>
+                        </div>
+
+                        <input type="hidden" id="overall-rating-input" name="overall_rating" value="">
+                    </div>
+
+                    <!-- Rate Different Areas Section -->
+                    <div class="areas-section-header">
+                        <h4 class="areas-title">Rate different areas</h4>
+                    </div>
+
+                    <!-- 6 Line-wise Rating Rows -->
+                    <div class="rating-areas-container">
+                        <!-- 1. Communication -->
+                        <div class="rating-area-row" data-area="communication">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Communication</span>
+                                    <span class="area-desc">Clarity, regular updates, and transparent discussions</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Design Quality -->
+                        <div class="rating-area-row" data-area="design_quality">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2C6.5 2 2 6.5 2 12c0 3.6 2 5.5 3.5 5.5 1 0 1.5-.9 2.5-.9 1.2 0 1.6 1.4 3 1.4 5.5 0 11-4.5 11-10 0-4.4-4.5-8-10-8z"></path>
+                                        <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+                                        <circle cx="12" cy="7.5" r="1.5" fill="currentColor"></circle>
+                                        <circle cx="16.5" cy="10.5" r="1.5" fill="currentColor"></circle>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Design Quality</span>
+                                    <span class="area-desc">Visual aesthetics, intuitive UI/UX, and consistent branding</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Development Quality -->
+                        <div class="rating-area-row" data-area="development_quality">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Development Quality</span>
+                                    <span class="area-desc">Clean code structure, bug-free execution, and performance</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Understanding Requirements -->
+                        <div class="rating-area-row" data-area="understanding_requirements">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Understanding Requirements</span>
+                                    <span class="area-desc">Grasping project scope, target user goals, and technical needs</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Timely Delivery -->
+                        <div class="rating-area-row" data-area="timely_delivered">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Timely Delivered</span>
+                                    <span class="area-desc">Milestone completion, sprint deadlines, and on-time delivery</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Support & Responsiveness -->
+                        <div class="rating-area-row" data-area="support_responsiveness">
+                            <div class="area-left">
+                                <div class="area-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                    </svg>
+                                </div>
+                                <div class="area-text">
+                                    <span class="area-name">Support &amp; Responsiveness</span>
+                                    <span class="area-desc">Quick query turnarounds, problem resolution, and helpful post-launch support</span>
+                                </div>
+                            </div>
+                            <div class="area-right">
+                                <div class="area-stars">
+                                    <button type="button" class="area-star-btn" data-rating="1" aria-label="1 star"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="2" aria-label="2 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="3" aria-label="3 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="4" aria-label="4 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                    <button type="button" class="area-star-btn" data-rating="5" aria-label="5 stars"><svg class="area-star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                </div>
+                                <div class="area-score-badge">- / 5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Informational Note Box -->
+                    <div class="feedback-note-box">
+                        <div class="note-icon-wrap">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4109db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"></path>
+                                <path d="M15 3v6h6"></path>
+                                <line x1="9" y1="13" x2="15" y2="13"></line>
+                                <line x1="9" y1="17" x2="13" y2="17"></line>
+                            </svg>
+                        </div>
+                        <p class="note-text">
+                            Detailed contextual feedback comments and project-specific notes will be collected in <span class="step3-highlight">Step 3</span>.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 Footer Action (Back & Next) -->
+                    <div class="form-footer-action">
+                        <button type="button" class="btn-prev" id="btn-back-step2">&larr; Back</button>
+                        <div class="progress-container">
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" id="progress-fill-2" style="width: 25%;"></div>
+                            </div>
+                            <span class="progress-label" id="progress-label-2">Step 2 of 4 (25%)</span>
+                        </div>
+                        <button type="button" class="btn-next" id="btn-next-step2">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3 CONTENT -->
+            <div id="step-3" class="step-page" style="display: none;">
+                <!-- Step 3 Question & Subtitle -->
+                <div class="step3-header-box">
+                    <h3 class="step3-title">Tell us what you think</h3>
+                    <p class="step3-subtitle">Your honest review helps us understand what we did well and how we can elevate your experience.</p>
+                </div>
+
+                <div class="form-section">
+                    <!-- Question with margin -->
+                    <div class="feedback-question-group">
+                        <label for="like-most" class="feedback-label">What do you like most about working with BlueVe? <span class="required">*</span></label>
+                        <textarea id="like-most" name="like_most" class="feedback-textarea" rows="5" placeholder="Share your honest thoughts, highlights of our collaboration, team responsiveness, or anything you enjoyed..."></textarea>
+                        <span class="error-text" id="like-most-error">Please share what you like most about working with BlueVe</span>
+                    </div>
+
+                    <!-- Question 2: What stood out to you? (2 rows x 4 columns) -->
+                    <div class="attributes-section">
+                        <h4 class="attributes-title">What stood out to you?</h4>
+                        <p class="attributes-subtitle">Select all attributes that reflect your engagement with our team</p>
+
+                        <div class="attributes-grid">
+                            <!-- 1. Great Design -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="great-design">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Great Design</span>
+                            </label>
+
+                            <!-- 2. Fast Communication -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="fast-communication">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Fast Communication</span>
+                            </label>
+
+                            <!-- 3. Professional Team -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="professional-team">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Professional Team</span>
+                            </label>
+
+                            <!-- 4. Easy to work with -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="easy-to-work-with">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Easy to work with</span>
+                            </label>
+
+                            <!-- 5. Creative Ideas -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="creative-ideas">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Creative Ideas</span>
+                            </label>
+
+                            <!-- 6. On-time Delivery -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="on-time-delivery">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">On-time Delivery</span>
+                            </label>
+
+                            <!-- 7. Technical Support -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="technical-support">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Technical Support</span>
+                            </label>
+
+                            <!-- 8. Requirements Fit -->
+                            <label class="attribute-pill">
+                                <input type="checkbox" name="attributes" value="requirements-fit">
+                                <span class="attribute-tick">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </span>
+                                <span class="attribute-label">Requirements Fit</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Footer Action (Back & Next) -->
+                    <div class="form-footer-action">
+                        <button type="button" class="btn-prev" id="btn-back-step3">&larr; Back</button>
+                        <div class="progress-container">
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" id="progress-fill-3" style="width: 50%;"></div>
+                            </div>
+                            <span class="progress-label" id="progress-label-3">Step 3 of 4 (50%)</span>
+                        </div>
+                        <button type="button" class="btn-next" id="btn-next-step3">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 CONTENT (Review & Submit) -->
+            <!-- STEP 4 CONTENT (One last thing) -->
+            <div id="step-4" class="step-page" style="display: none;">
+                <!-- Step 4 Header Box -->
+                <div class="step4-header-box">
+                    <h3 class="step4-title">One last thing</h3>
+                    <p class="step4-subtitle">Your feedback can help other businesses understand what it's like to work with BlueVe.</p>
+                </div>
+
+                <div class="form-section">
+                    <!-- Recommendation Question -->
+                    <div class="recommend-section">
+                        <label class="recommend-title">Would you recommend BlueVe to others? <span class="required">*</span></label>
+                        <span class="error-text" id="recommend-error">Please select an option</span>
+
+                        <div class="recommend-grid">
+                            <!-- Option 1: Definitely -->
+                            <label class="recommend-card">
+                                <input type="radio" name="recommend" value="definitely">
+                                <div class="recommend-card-header">
+                                    <div class="recommend-emoji-box">
+                                        <span class="recommend-emoji">🤩</span>
+                                    </div>
+                                    <span class="recommend-tick">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="recommend-card-body">
+                                    <div class="recommend-main-word">Definitely</div>
+                                    <div class="recommend-sub-text">High confidence</div>
+                                </div>
+                            </label>
+
+                            <!-- Option 2: Maybe -->
+                            <label class="recommend-card">
+                                <input type="radio" name="recommend" value="maybe">
+                                <div class="recommend-card-header">
+                                    <div class="recommend-emoji-box">
+                                        <span class="recommend-emoji">🤔</span>
+                                    </div>
+                                    <span class="recommend-tick">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="recommend-card-body">
+                                    <div class="recommend-main-word">Maybe</div>
+                                    <div class="recommend-sub-text">Conditional</div>
+                                </div>
+                            </label>
+
+                            <!-- Option 3: Not sure -->
+                            <label class="recommend-card">
+                                <input type="radio" name="recommend" value="not-sure">
+                                <div class="recommend-card-header">
+                                    <div class="recommend-emoji-box">
+                                        <span class="recommend-emoji">⚖️</span>
+                                    </div>
+                                    <span class="recommend-tick">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="recommend-card-body">
+                                    <div class="recommend-main-word">Not sure</div>
+                                    <div class="recommend-sub-text">Neutral view</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Question (Optional) -->
+                    <div class="testimonial-section">
+                        <label for="testimonial" class="testimonial-title">
+                            Would you like to share a short testimonial? <span class="optional-tag">optional</span>
+                        </label>
+                        <textarea id="testimonial" name="testimonial" class="testimonial-textarea" rows="4" placeholder="Write a short testimonial about your experience working with BlueVe..."></textarea>
+                    </div>
+
+                    <!-- Permission Card -->
+                    <div class="permission-card">
+                        <div class="permission-label">Permission</div>
+                        <h4 class="permission-question">Can we feature your feedback on the BlueVe Website?</h4>
+
+                        <div class="permission-options">
+                            <!-- Option 1: Yes -->
+                            <label class="permission-option-row selected">
+                                <div class="permission-option-left">
+                                    <input type="radio" name="feature_permission" value="yes" checked>
+                                    <span class="custom-radio-circle"></span>
+                                    <span class="permission-option-text">Yes, I'd be happy for BlueVe to feature my feedback</span>
+                                </div>
+                                <div class="permission-option-right">
+                                    <span class="globe-icon" title="Publicly featured">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </label>
+
+                            <!-- Option 2: No -->
+                            <label class="permission-option-row">
+                                <div class="permission-option-left">
+                                    <input type="radio" name="feature_permission" value="no">
+                                    <span class="custom-radio-circle"></span>
+                                    <span class="permission-option-text">No, please keep my feedback private</span>
+                                </div>
+                                <div class="permission-option-right">
+                                    <span class="privacy-lock-icon" title="Kept private">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Security Notice Note -->
+                        <div class="permission-security-note">
+                            <span class="security-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </span>
+                            <p class="security-text">
+                                This permission only applies to publicly featuring quotes and testimonials. Your email and private operational comments are always kept strictly confidential.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 Footer Action (Back & Submit) -->
+                    <div class="form-footer-action">
+                        <button type="button" class="btn-prev" id="btn-back-step4">&larr; Back</button>
+                        <div class="progress-container">
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" id="progress-fill-4" style="width: 100%;"></div>
+                            </div>
+                            <span class="progress-label" id="progress-label-4">Step 4 of 4 (100%)</span>
+                        </div>
+                        <button type="button" class="btn-submit" id="btn-submit-form">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUCCESS CONFIRMATION SCREEN (Shown after Submit) -->
+            <div id="step-success" class="step-page" style="display: none;">
+                <div class="success-card">
+                    <div class="success-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="success-title">Thank You, <span id="success-client-name">Valued Client</span>!</h3>
+                    <p class="success-subtitle">Your review has been successfully submitted to BlueVe Tech Pvt Ltd.</p>
+                    <p class="success-desc">We deeply appreciate your partnership and honest insights. Your feedback helps us continuously raise the bar and deliver extraordinary results.</p>
+                    <div class="success-actions">
+                        <a href="https://www.blueve.tech/" target="_blank" rel="noopener noreferrer" class="btn-submit" id="btn-goto-blueve">Go to BlueVe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Bottom Navigation / Footer -->
+    <footer class="bottom-navigation">
+        <div class="footer-left">
+            <span>&copy; 2026 BlueVe Consulting Group. All rights reserved.</span>
+        </div>
+        <div class="footer-right">
+            <span class="encrypted-session">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                End to end encrypted session
+            </span>
+            <a href="#" class="privacy-link">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- External Script for Multi-step Form -->
+    <script src="script.js"></script>
+</body>
+</html>
