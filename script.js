@@ -319,6 +319,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Navigation Functions
     // ----------------------------------------------------
 
+    // Helper to scroll smoothly to the top of the page on step transition
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     // Transition to Step 1
     function goToStep1() {
         if (step4) step4.style.display = 'none';
@@ -346,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function () {
         stepStatus4.textContent = 'Pending';
 
         updateStep1Progress();
-        step1.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        scrollToTop();
     }
 
     // Transition to Step 2
@@ -383,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (progressLabel2) progressLabel2.textContent = 'Step 2 of 4 (25%)';
         }
 
-        step2.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        scrollToTop();
     }
 
     // Transition to Step 3
@@ -412,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
         stepStatus4.textContent = 'Pending';
 
         updateStep3Progress();
-        if (step3) step3.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        scrollToTop();
     }
 
     // Transition to Step 4 (One last thing)
@@ -443,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (progressFill4) progressFill4.style.width = '100%';
         if (progressLabel4) progressLabel4.textContent = 'Step 4 of 4 (100%)';
 
-        if (step4) step4.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        scrollToTop();
     }
 
     // Button event listeners
@@ -623,7 +631,7 @@ document.addEventListener('DOMContentLoaded', function () {
             stepIcon4.innerHTML = '&#10003;';
             stepStatus4.textContent = 'Completed';
 
-            if (stepSuccess) stepSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            scrollToTop();
         });
     }
 
