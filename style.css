@@ -7,6 +7,7 @@
 body {
     background-color: #e7dcdc;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 /* Sticky Header & Navbar */
@@ -88,7 +89,8 @@ nav ul li:hover {
 /* Form Container */
 .forms {
     height: auto;
-    width: 900px;
+    width: 94%;
+    max-width: 900px;
     background-color: white;
     margin: 25px auto 15px auto;
     border-radius: 12px;
@@ -1527,7 +1529,8 @@ nav ul li:hover {
 
 /* Bottom Navigation / Footer */
 .bottom-navigation {
-    width: 900px;
+    width: 94%;
+    max-width: 900px;
     margin: 12px auto 40px auto;
     display: flex;
     justify-content: space-between;
@@ -1563,4 +1566,362 @@ nav ul li:hover {
 
 .privacy-link:hover {
     text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Media Queries for Tablets & Mobile Devices)
+   ========================================================================== */
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Sticky Header & Navbar */
+    header {
+        padding: 10px 16px;
+    }
+
+    nav {
+        height: auto;
+        min-height: 48px;
+    }
+
+    /* Hide extra menu items on tablet/mobile so header fits cleanly */
+    nav ul li:not(.badge-item) {
+        display: none;
+    }
+
+    .badge-item {
+        padding: 5px 10px;
+        font-size: 12px !important;
+    }
+
+    .logo h2 {
+        font-size: 17px;
+    }
+
+    .logo img {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Form Container & Headings */
+    .forms {
+        width: 95%;
+        margin: 16px auto;
+        border-radius: 10px;
+    }
+
+    #form-stepper-header h5 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+
+    #form-stepper-header h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 22px;
+    }
+
+    /* Stepper Navigation Row */
+    .stepper-row {
+        margin: 18px 20px;
+        gap: 10px;
+        padding-bottom: 18px;
+    }
+
+    .step-item {
+        padding: 10px 12px;
+    }
+
+    .step-title {
+        font-size: 13px;
+    }
+
+    .step-status {
+        font-size: 11px;
+        margin-left: 30px;
+    }
+
+    /* Section Margins */
+    .banner-box {
+        margin: 16px 20px;
+        padding: 12px 14px;
+    }
+
+    .form-section {
+        margin: 16px 20px;
+    }
+
+    .step2-question-box,
+    .step3-header-box,
+    .step4-header-box {
+        margin: 16px 20px 12px 20px;
+    }
+
+    .step2-title,
+    .step3-title,
+    .step4-title {
+        font-size: 20px;
+    }
+
+    /* Step 3 Attributes: 2 columns on tablet */
+    .attributes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* Step 4 Recommendations */
+    .recommend-grid {
+        gap: 10px;
+    }
+}
+
+/* Mobile Screens (max-width: 640px) */
+@media (max-width: 640px) {
+    /* Header logo */
+    .logo h2 {
+        font-size: 15px;
+    }
+
+    .badge-item {
+        font-size: 11px !important;
+        padding: 4px 8px;
+    }
+
+    /* Stepper: Convert 4-item flex into a compact, beautiful 2x2 grid */
+    .stepper-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 16px 14px;
+        padding-bottom: 16px;
+    }
+
+    .step-item {
+        padding: 10px 12px;
+    }
+
+    .step-status {
+        margin-left: 34px;
+    }
+
+    /* Adjust side margins so inputs have full room to breathe */
+    #form-stepper-header h5,
+    #form-stepper-header h3,
+    .banner-box,
+    .form-section,
+    .step2-question-box,
+    .step3-header-box,
+    .step4-header-box {
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    #form-stepper-header h3 {
+        font-size: 19px;
+    }
+
+    /* Step 1: Form Inputs side-by-side stack into single vertical column */
+    .form-row {
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    /* Step 1: Services Grid: 1 column full width cards */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .service-card {
+        padding: 14px 16px;
+    }
+
+    /* Step 2: Experience Rating Card */
+    .experience-answer-card {
+        padding: 16px 14px;
+    }
+
+    .answer-card-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .star-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .star-labels-row {
+        gap: 4px;
+    }
+
+    .star-label-item {
+        font-size: 11px;
+        padding: 3px 5px;
+    }
+
+    /* Step 2: Rating Areas Row: Stack icon & info on top, stars & badge on bottom */
+    .rating-area-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .area-left {
+        width: 100%;
+    }
+
+    .area-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .area-star-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .area-name {
+        font-size: 13.5px;
+    }
+
+    .area-desc {
+        font-size: 12px;
+    }
+
+    /* Step 3: Textarea and Attributes */
+    .feedback-textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+        min-height: 120px;
+    }
+
+    .attributes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .attribute-pill {
+        padding: 9px 8px;
+    }
+
+    .attribute-label {
+        font-size: 12px;
+    }
+
+    /* Step 4: Recommendation Cards Stack */
+    .recommend-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .recommend-card {
+        min-height: auto;
+        padding: 14px 16px;
+    }
+
+    .testimonial-textarea {
+        padding: 12px 14px;
+        min-height: 90px;
+    }
+
+    .permission-card {
+        padding: 16px 14px;
+    }
+
+    .permission-option-row {
+        padding: 12px 14px;
+    }
+
+    .permission-option-text {
+        font-size: 13px;
+    }
+
+    /* Form Footer Actions: Reorganize cleanly with full touch buttons */
+    .form-footer-action {
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 24px;
+        padding-top: 18px;
+    }
+
+    .progress-container {
+        order: -1;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .progress-bar-track {
+        flex: 1;
+    }
+
+    .btn-prev,
+    .btn-next,
+    .btn-submit {
+        flex: 1;
+        text-align: center;
+        padding: 11px 16px;
+    }
+
+    /* Success Card */
+    .success-card {
+        padding: 24px 14px;
+    }
+
+    .success-title {
+        font-size: 20px;
+    }
+
+    .success-desc {
+        font-size: 13px;
+    }
+
+    /* Bottom Navigation / Footer */
+    .bottom-navigation {
+        width: 95%;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        margin: 10px auto 30px auto;
+    }
+
+    .footer-right {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* Extra Small Phones (max-width: 400px) */
+@media (max-width: 400px) {
+    .star-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .star-label-item {
+        font-size: 9px;
+        padding: 2px 3px;
+    }
+
+    .attribute-label {
+        font-size: 11px;
+    }
+
+    .step-title {
+        font-size: 12px;
+    }
+
+    .step-number {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+    }
+
+    .step-status {
+        margin-left: 26px;
+        font-size: 10px;
+    }
 }
